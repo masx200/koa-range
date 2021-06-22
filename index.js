@@ -88,7 +88,6 @@ module.exports = async function (ctx, next) {
         let ctxlength = end - start + 1;
         if (ctxlength <= 0) {
             ctx.status = 416;
-            ctx.body = null;
         }
 
         ctx.length = Math.max(0, ctxlength);
