@@ -46,7 +46,7 @@ module.exports = async function (ctx, next) {
             rawBody = rawBody.path
                 ? fs.createReadStream(rawBody.path, {
                       start,
-                      end: end + 1,
+                      end: end ,
                   })
                 : rawBody.pipe(slice(start, end + 1));
             //  console.log(rawBody);
