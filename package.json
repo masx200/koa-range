@@ -1,4 +1,8 @@
 {
+    "publishConfig": {
+        "access": "public",
+        "registry": "https://registry.npmjs.com/"
+    },
     "name": "@masx200/koa-range",
     "version": "1.0.0",
     "description": "range request implementation for koa",
