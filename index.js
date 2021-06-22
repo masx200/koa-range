@@ -85,7 +85,14 @@ module.exports = async function (ctx, next) {
     }
 
     if (len !== "*") {
-        ctx.length = end - start + 1;
+        let ctxlength = end - start + 1;
+        if (ctxlength < 0) {
+            ctx.status = 416;
+        }
+        if (ctxlength === 0) {
+            ctx.status = 204;
+        }
+        ctx.length = Math.max(0, ctxlength);
     }
 };
 
