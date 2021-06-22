@@ -1,6 +1,4 @@
-
 # koa-range
-
 
 forked from https://github.com/koajs/koa-range
 
@@ -26,42 +24,48 @@ range request implementation for koa
 ### Installation
 
 ```sh
-$ npm install koa-range
+$ npm install @masx200/koa-range
 ```
 
 ### Usage (with koa@2)
 
 ```js
-var fs = require('fs');
-var range = require('koa-range');
-var route = require('koa-route');
-var Koa = require('koa');
+var fs = require("fs");
+var range = require("@masx200/koa-range");
+var route = require("koa-route");
+var Koa = require("koa");
 var app = new Koa();
 
 app.use(range);
 
 // via buffer
-app.use(route.get('/', async function (ctx) {
-  ctx.body = new Buffer(100);
-}));
+app.use(
+    route.get("/", async function (ctx) {
+        ctx.body = new Buffer(100);
+    })
+);
 
 // via object
-app.use(route.get('/json', async function (ctx) {
-  ctx.body = {
-    'foo': 'bar'
-  };
-}));
+app.use(
+    route.get("/json", async function (ctx) {
+        ctx.body = {
+            foo: "bar",
+        };
+    })
+);
 
 // via readable stream
-app.use(route.get('/stream', async function (ctx) {
-  ctx.body = fs.createReadStream('your path');
-}));
-
+app.use(
+    route.get("/stream", async function (ctx) {
+        ctx.body = fs.createReadStream("your path");
+    })
+);
 ```
 
 Until async/await is supported by default, you will need to do one of the following:
-- Transpile your code with somehting like Babel
-- Use node v7 with --harmony-async-await flag
+
+-   Transpile your code with somehting like Babel
+-   Use node v7 with --harmony-async-await flag
 
 ### License
 
