@@ -8,6 +8,8 @@ https://github.com/koajs/koa-range/issues/17
 
 https://github.com/koajs/koa-range/issues/16
 
+https://github.com/koajs/koa-range/issues/19
+
 =================
 
 range request implementation for koa
