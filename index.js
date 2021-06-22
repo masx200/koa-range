@@ -1,7 +1,7 @@
 var util = require("util");
 var slice = require("stream-slice").slice;
 var Stream = require("stream");
-
+const fs = require("fs");
 module.exports = async function (ctx, next) {
     var range = ctx.header.range;
     ctx.set("Accept-Ranges", "bytes");
@@ -42,7 +42,14 @@ module.exports = async function (ctx, next) {
     if (!Buffer.isBuffer(rawBody)) {
         if (rawBody instanceof Stream.Readable) {
             len = ctx.length || "*";
-            rawBody = rawBody.pipe(slice(start, end + 1));
+            // rawBody = rawBody.pipe(slice(start, end + 1));
+            rawBody = rawBody.path
+                ? fs.createReadStream(path, {
+                      start,
+                      end: end + 1,
+                  })
+                : rawBody.pipe(slice(start, end + 1));
+            console.log(rawBody);
         } else if (typeof rawBody !== "string") {
             rawBody = new Buffer(JSON.stringify(rawBody));
             len = rawBody.length;
