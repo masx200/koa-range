@@ -44,12 +44,12 @@ module.exports = async function (ctx, next) {
             len = ctx.length || "*";
             // rawBody = rawBody.pipe(slice(start, end + 1));
             rawBody = rawBody.path
-                ? fs.createReadStream(path, {
+                ? fs.createReadStream(rawBody.path, {
                       start,
                       end: end + 1,
                   })
                 : rawBody.pipe(slice(start, end + 1));
-            console.log(rawBody);
+            //  console.log(rawBody);
         } else if (typeof rawBody !== "string") {
             rawBody = new Buffer(JSON.stringify(rawBody));
             len = rawBody.length;
