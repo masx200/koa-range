@@ -4,7 +4,7 @@
         "registry": "https://registry.npmjs.com/"
     },
     "name": "@masx200/koa-range",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "description": "range request implementation for koa",
     "main": "index.js",
     "scripts": {
