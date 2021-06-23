@@ -1,6 +1,6 @@
 # koa-range
 
-forked from 
+forked from
 
 https://github.com/koajs/koa-range
 
