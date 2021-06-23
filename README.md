@@ -1,6 +1,10 @@
 # koa-range
 
-forked from https://github.com/koajs/koa-range
+forked from 
+
+https://github.com/koajs/koa-range
+
+It seems that the original project has not been updated for a long time.
 
 The following problems have been fixed.
 
@@ -11,6 +15,8 @@ https://github.com/koajs/koa-range/issues/15
 https://github.com/koajs/koa-range/issues/16
 
 https://github.com/koajs/koa-range/issues/19
+
+https://github.com/koajs/koa-range/issues/20
 
 =================
 
