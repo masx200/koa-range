@@ -43,5 +43,12 @@
     "bugs": {
         "url": "https://github.com/masx200/koa-range/issues"
     },
-    "homepage": "https://github.com/masx200/koa-range#readme"
+    "homepage": "https://github.com/masx200/koa-range#readme",
+    "resolutions": {
+        "js-yaml": "3.13.0",
+        "underscore": "1.12.1",
+        "minimatch": "3.0.2",
+        "underscore.string": "3.3.5",
+        "async": "2.6.4"
+    }
 }
