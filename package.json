@@ -1,10 +1,11 @@
 {
+    "types": "index.d.ts",
     "publishConfig": {
         "access": "public",
-        "registry": "https://registry.npmjs.com/"
+        "registry": "https://registry.npmjs.org/"
     },
     "name": "@masx200/koa-range",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "description": "range request implementation for koa",
     "main": "index.js",
     "scripts": {
@@ -18,6 +19,7 @@
     ],
     "license": "MIT",
     "devDependencies": {
+        "@types/koa": "^2.13.4",
         "istanbul": "^0.4.5",
         "koa": "^2.13.1",
         "koa-route": "^3.2.0",
